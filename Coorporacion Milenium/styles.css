@@ -1,0 +1,152 @@
+/* === ESTILOS GENERALES === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+header {
+  background: linear-gradient(90deg, #0a3d62, #3c6382);
+  color: white;
+  padding: 20px;
+  display: flex;               /* 🔹 activa flexbox */
+  justify-content: space-between; /* 🔹 separa título a la izquierda y nav a la derecha */
+  align-items: center;
+}
+
+ /* logo de la empresa */
+.icono {
+  width: 125px;        /* tamaño pequeño */
+  height: auto;
+  margin-left: -2100px;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;   /* 🔹 enlaces uno debajo del otro */
+  gap: 10px;                /* 🔹 separación entre enlaces */
+}
+
+/* Parte donde salen el quienes somos, servicios y contactos */
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-left: 200px; /* Cambia este valor para ajustar la distancia */
+}
+
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* === SECCIONES === */
+section {
+  padding: 50px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #0a3d62;
+}
+
+.about, .services, .contact {
+  background: white;
+  margin-bottom: 20px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+}
+
+.services ul {
+  list-style: none;
+  padding: 0;
+}
+
+.services li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+/* === FOOTER === */
+footer {
+  text-align: center;
+  background: #0a3d62;
+  color: white;
+  padding: 15px;
+  margin-top: 20px;
+}
+ 
+/* Estilos para la lista de servicios */
+.lista-servicios {
+  display: flex; /* Activa Flexbox para distribuir los elementos */
+  flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente fila en pantallas pequeñas */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  gap: 20px; /* Crea un espacio entre cada recuadro */
+}
+
+/* Estilos para cada recuadro de servicio */
+.lista-servicios li {
+  background-color: #f0f0f0; /* Color de fondo del recuadro */
+  padding: 20px; /* Espacio interno dentro del recuadro */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Una sombra sutil para un efecto 3D */
+  flex-basis: calc(33.33% - 20px); /* Ocupa 1/3 del ancho, restando el espacio entre ellos */
+  text-align: center; /* Centra el texto */
+  font-weight: bold; /* El texto en negrita */
+  list-style-type: none; /* Elimina los puntos de la lista */
+}
+
+/*Vinculos*/
+.lista-servicios li a {
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  color: inherit; /* Hereda el color del texto del elemento padre (li) */
+  display: block; /* Hace que el enlace ocupe todo el espacio del recuadro */
+}
+
+.lista-servicios li a:hover {
+  text-decoration: underline; /* Puedes agregar un subrayado solo al pasar el mouse */
+}
+
+/* Logos */
+.lista-servicios li img {
+  width: 100px;
+  height: auto;
+  border-radius: 5%;
+}
+
+/*Colores del titulo*/
+.lista-servicios li a {
+  text-decoration: none;
+  color: #0064ac; 
+  font-weight: bold;
+}
