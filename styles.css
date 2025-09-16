@@ -3,150 +3,185 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Open Sans', sans-serif; /* Cambiamos la fuente general del cuerpo para mejor legibilidad */
 }
 
 body {
   line-height: 1.6;
-  color: #333;
-  background-color: #f9f9f9;
+  color: #34495e; /* Un gris más oscuro y cálido para el texto principal */
+  background-color: #ecf0f1; /* Un fondo gris muy claro para un toque más moderno */
+  font-size: 1.1rem;
 }
 
+/* === ENCABEZADO === */
 header {
-  background: linear-gradient(90deg, #0a3d62, #3c6382);
+  background: linear-gradient(90deg, #2c3e50, #34495e); /* Gradiente más oscuro y elegante */
   color: white;
-  padding: 20px;
-  display: flex;               /* 🔹 activa flexbox */
-  justify-content: space-between; /* 🔹 separa título a la izquierda y nav a la derecha */
+  padding: 25px 30px; /* Más padding para que el header sea más prominente */
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra sutil para darle profundidad */
 }
 
- /* logo de la empresa */
+/* Contenedor para el logo y el título */
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Aumentamos un poco el espacio para que respire más */
+}
+
+/* El logo */
 .icono {
-  width: 125px;        /* tamaño pequeño */
+  width: 100px; /* Ajustamos un poco el tamaño del logo */
   height: auto;
-  margin-left: -2100px;
 }
 
+/* El título principal */
+header h1 {
+  font-size: 3.2rem; /* Ajustamos ligeramente el tamaño del título */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700; /* Aseguramos que sea negrita */
+  letter-spacing: -0.5px; /* Pequeño ajuste para que se vea más profesional */
+}
+
+/* La navegación */
 nav {
   display: flex;
-  flex-direction: column;   /* 🔹 enlaces uno debajo del otro */
-  gap: 10px;                /* 🔹 separación entre enlaces */
-}
-
-/* Parte donde salen el quienes somos, servicios y contactos */
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-header h1 {
-  font-size: 2.5rem;
-  margin-left: 200px; /* Cambia este valor para ajustar la distancia */
-}
-
-
-nav {
-  margin-top: 10px;
+  gap: 20px; /* Más espacio entre los enlaces de navegación */
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  margin: 0 15px;
-  font-weight: bold;
+  font-weight: 600; /* Un poco más de negrita */
+  font-size: 1.05rem; /* Ligeramente más grande */
+  padding: 5px 10px; /* Padding para que los enlaces se vean como botones suaves */
+  border-radius: 5px;
+  transition: background-color 0.3s ease; /* Transición para el hover */
 }
 
 nav a:hover {
-  text-decoration: underline;
+  background-color: rgba(255, 255, 255, 0.1); /* Fondo sutil al pasar el mouse */
+  text-decoration: none; /* Quitamos el subrayado en hover si no queremos */
 }
 
 /* === SECCIONES === */
 section {
-  padding: 50px 20px;
-  max-width: 1000px;
+  padding: 80px 30px; /* Más padding lateral */
+  max-width: 1100px; /* Un poco más ancho el contenido principal */
   margin: auto;
 }
 
+/* Títulos de sección (como "Quienes somos" y "Nuestros Servicios") */
 section h2 {
   text-align: center;
-  margin-bottom: 20px;
-  color: #0a3d62;
+  margin-bottom: 50px; /* Más espacio debajo del título de sección */
+  color: #2c3e50; /* Color del título de sección más oscuro */
+  font-size: 3rem; /* Más grande */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase; /* En mayúsculas para un toque corporativo */
+  letter-spacing: 2px;
+  position: relative;
 }
 
-.about, .services, .contact {
-  background: white;
-  margin-bottom: 20px;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+/* Línea decorativa debajo de los títulos de sección */
+section h2::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -15px; /* Distancia de la línea al texto */
+  transform: translateX(-50%);
+  width: 80px; /* Ancho de la línea */
+  height: 4px; /* Grosor de la línea */
+  background-color: #3498db; /* Color de acento para la línea */
+  border-radius: 2px;
 }
 
-.services ul {
-  list-style: none;
-  padding: 0;
+
+/* Estilos para la sección "Quienes somos" */
+.about p {
+  color: #555; /* Un gris más suave para la descripción */
+  font-size: 1.15rem; /* Ligeramente más grande */
+  line-height: 1.9; /* Mayor espacio entre líneas para mejor lectura */
+  text-align: center; /* Centramos la descripción para que se vea más limpia */
+  max-width: 800px; /* Limitamos el ancho para que no se extienda demasiado */
+  margin: 0 auto; /* Centramos el párrafo */
 }
 
-.services li {
-  padding: 10px 0;
-  border-bottom: 1px solid #ddd;
-}
-
-/* === FOOTER === */
-footer {
-  text-align: center;
-  background: #0a3d62;
-  color: white;
-  padding: 15px;
-  margin-top: 20px;
-}
- 
-/* Estilos para la lista de servicios */
+/* === RECUADROS DE SERVICIOS === */
 .lista-servicios {
-  display: flex; /* Activa Flexbox para distribuir los elementos */
-  flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente fila en pantallas pequeñas */
-  justify-content: center; /* Centra los elementos horizontalmente */
-  gap: 20px; /* Crea un espacio entre cada recuadro */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px; /* Más espacio entre los recuadros */
+  margin-top: 50px; /* Espacio adicional arriba de la lista de servicios */
 }
 
-/* Estilos para cada recuadro de servicio */
 .lista-servicios li {
-  background-color: #f0f0f0; /* Color de fondo del recuadro */
-  padding: 20px; /* Espacio interno dentro del recuadro */
-  border-radius: 8px; /* Bordes redondeados */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Una sombra sutil para un efecto 3D */
-  flex-basis: calc(33.33% - 20px); /* Ocupa 1/3 del ancho, restando el espacio entre ellos */
-  text-align: center; /* Centra el texto */
-  font-weight: bold; /* El texto en negrita */
-  list-style-type: none; /* Elimina los puntos de la lista */
+  background-color: #ffffff;
+  padding: 30px; /* Más padding interno para los recuadros */
+  border-radius: 12px; /* Bordes más redondeados */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Sombra más fuerte para un efecto 3D */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para ambos efectos */
+  flex-basis: calc(33.33% - 40px); /* Ajuste del ancho para el nuevo gap */
+  text-align: center;
+  list-style-type: none;
+  border: 1px solid #e0e0e0; /* Borde sutil */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px; /* Más espacio entre los elementos internos */
 }
 
-/*Vinculos*/
+.lista-servicios li:hover {
+  transform: translateY(-8px); /* Se eleva un poco más */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el mouse */
+}
+
+/* Logos de los servicios */
+.lista-servicios li img {
+  width: 120px; /* Aumentamos el tamaño de los logos de servicio */
+  height: auto;
+  border-radius: 10%; /* Los hacemos redondos para un toque moderno */
+  border: 4px solid #3498db; /* Borde de color de acento alrededor del logo */
+  padding: 5px; /* Espacio entre el borde y la imagen */
+  background-color: white;
+}
+
 .lista-servicios li a {
-  text-decoration: none; /* Elimina el subrayado del enlace */
-  color: inherit; /* Hereda el color del texto del elemento padre (li) */
-  display: block; /* Hace que el enlace ocupe todo el espacio del recuadro */
+  text-decoration: none;
+  color: #2c3e50; /* Un color más oscuro para el título del servicio */
+  font-weight: 700; /* Más negrita */
+  font-size: 1.4rem; /* Más grande */
+  transition: color 0.3s ease;
 }
 
 .lista-servicios li a:hover {
-  text-decoration: underline; /* Puedes agregar un subrayado solo al pasar el mouse */
+  color: #3498db; /* Color de acento al pasar el mouse */
+  text-decoration: underline;
 }
 
-/* Logos */
-.lista-servicios li img {
-  width: 100px;
-  height: auto;
-  border-radius: 5%;
+.lista-servicios li p {
+  color: #7f8c8d; /* Un gris más suave para la descripción */
+  font-size: 1.05rem; /* Ligeramente más grande */
+  margin-top: 0;
+  line-height: 1.7;
 }
 
-/*Colores del titulo*/
-.lista-servicios li a {
-  text-decoration: none;
-  color: #0064ac; 
-  font-weight: bold;
+/* === PIE DE PÁGINA === */
+footer {
+  text-align: center;
+  background: #2c3e50; /* Color de fondo del footer más oscuro */
+  color: white;
+  padding: 30px; /* Más padding */
+  margin-top: 50px;
+  font-size: 1rem;
 }
+
+/* Fuentes de Google Fonts a importar en el HTML */
+/* <link rel="preconnect" href="https://fonts.googleapis.com"> */
+/* <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> */
+/* <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"> */
