@@ -185,3 +185,56 @@ footer {
 /* <link rel="preconnect" href="https://fonts.googleapis.com"> */
 /* <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> */
 /* <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"> */
+
+/* Media Query para pantallas pequeñas, como teléfonos móviles */
+@media (max-width: 768px) {
+  /* === ENCABEZADO === */
+  header {
+    flex-direction: column; /* Apila el logo, el título y la navegación */
+    text-align: center;
+    padding: 20px 15px; /* Reduce el padding para pantallas pequeñas */
+  }
+
+  /* Contenedor del logo y título */
+  .header-brand {
+    flex-direction: column; /* Apila el logo y el título */
+    gap: 10px; /* Más espacio entre ellos */
+    margin-bottom: 20px;
+  }
+
+  header h1 {
+    font-size: 2.5rem; /* Reduce el tamaño del título para que quepa en una línea */
+  }
+  
+  nav {
+    flex-direction: column; /* Apila los enlaces de la navegación */
+    gap: 15px; /* Más espacio entre los enlaces */
+  }
+
+  /* === SECCIONES === */
+  section {
+    padding: 40px 15px; /* Reduce el padding de las secciones */
+  }
+
+  section h2 {
+    font-size: 2rem; /* Reduce el tamaño de los títulos de sección */
+    margin-bottom: 30px; /* Más espacio debajo del título */
+  }
+
+  /* Descripción "Quienes somos" */
+  .about p {
+    text-align: center; /* Asegura que el texto esté centrado en móviles */
+    font-size: 1rem; /* Un tamaño más adecuado para móviles */
+  }
+  
+  /* === RECUADROS DE SERVICIOS === */
+  .lista-servicios li {
+    flex-basis: 100%; /* Hace que cada recuadro ocupe todo el ancho */
+    flex-direction: column; /* Apila el logo del servicio y el texto */
+    padding: 20px;
+  }
+  
+  .lista-servicios li img {
+    width: 80px; /* Reduce el tamaño de los logos de servicio */
+  }
+}
