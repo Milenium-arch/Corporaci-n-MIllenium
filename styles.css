@@ -198,7 +198,7 @@ footer {
   /* Contenedor del logo y título */
   .header-brand {
     flex-direction: column; /* Apila el logo y el título */
-    gap: 10px; /* Más espacio entre ellos */
+    gap: 20px; /* Más espacio entre ellos */
     margin-bottom: 20px;
   }
 
