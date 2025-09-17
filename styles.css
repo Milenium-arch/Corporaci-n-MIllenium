@@ -313,9 +313,72 @@ footer {
     max-width: 500px;
 }
 
-/* Ajustes para dispositivos móviles */
-@media (max-width: 768px) {
-    .lista-servicios li, .technosoft-xpress-complex-block, .sigma-facturelo-complex-block {
-        flex-basis: 100%;
-    }
+/* === SECCIÓN DE CONTACTO === */
+.contact {
+    text-align: center;
+    background-color: #f8f9f9; /* Un color de fondo muy suave para que se destaque */
+    border-radius: 12px;
+    padding: 60px 30px; /* Más espacio interior */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 15px 0; /* Espaciado entre cada línea de contacto */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.contact p a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.contact p a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+/* Estilo para los íconos de contacto */
+.contact p span {
+    font-size: 1.5rem;
+    color: #3498db;
+}
+
+/* === SECCIÓN QUIÉNES SOMOS === */
+.about {
+    background-color: #ffffff; /* Fondo blanco para la tarjeta */
+    border-radius: 12px;
+    padding: 60px 40px; /* Más espacio interior para el contenido */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Sombra suave para darle profundidad */
+    max-width: 900px;
+    margin: 50px auto; /* Centrar la tarjeta y añadir espacio */
+}
+
+.about h2 {
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+.about p {
+    color: #555;
+    font-size: 1.15rem;
+    line-height: 1.9;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
 }
