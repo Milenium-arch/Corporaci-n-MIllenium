@@ -1,58 +1,45 @@
 document.addEventListener('DOMContentLoaded', () => {
     const track = document.querySelector('.video-carousel-track');
     const slides = Array.from(track.children);
+    const videos = slides.map(slide => slide.querySelector('video'));
     const nextButton = document.querySelector('.nav-next');
     const prevButton = document.querySelector('.nav-prev');
-    const videos = track.querySelectorAll('video');
+    let currentIndex = 0;
 
-    let slideWidth;
-    let currentSlide = 0;
-
-    const setSlideWidth = () => {
-        slideWidth = slides[0].getBoundingClientRect().width;
-        track.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
-    };
-
-    window.addEventListener('resize', setSlideWidth);
-    setSlideWidth();
-
-    const updateCarousel = (targetIndex) => {
-        track.style.transform = `translateX(-${targetIndex * slideWidth}px)`;
-        videos.forEach((video, index) => {
-            if (index === targetIndex) {
-                video.play().catch(error => {
-                    console.error("Autoplay failed:", error);
-                    video.controls = true;
-                });
-            } else {
-                video.pause();
-                // Eliminamos la línea para no reiniciar el video
-            }
+    const playCurrentVideo = () => {
+        // Pausa todos los videos
+        videos.forEach(video => {
+            video.pause();
+            video.currentTime = 0; // Reinicia el video para la próxima vez
         });
+
+        // Reproduce el video actual
+        videos[currentIndex].play();
     };
 
+    const moveToSlide = (index) => {
+        currentIndex = (index + slides.length) % slides.length;
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        playCurrentVideo();
+    };
+
+    // Botón Siguiente
     nextButton.addEventListener('click', () => {
-        currentSlide = (currentSlide + 1) % slides.length;
-        updateCarousel(currentSlide);
+        moveToSlide(currentIndex + 1);
     });
 
+    // Botón Anterior
     prevButton.addEventListener('click', () => {
-        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-        updateCarousel(currentSlide);
+        moveToSlide(currentIndex - 1);
     });
-    
-    // Función para manejar el evento de pantalla completa
-    videos.forEach(video => {
-        video.addEventListener('fullscreenchange', () => {
-            if (!document.fullscreenElement) {
-                // Si salimos de pantalla completa, pausa el video
-                video.pause();
-                // Actualiza el carrusel para que permanezca en el video actual
-                updateCarousel(currentSlide);
-            }
+
+    // Evento para que el video avance automáticamente al siguiente
+    videos.forEach((video) => {
+        video.addEventListener('ended', () => {
+            moveToSlide(currentIndex + 1);
         });
     });
 
-    // Inicia el carrusel con el primer video reproduciéndose
-    updateCarousel(currentSlide);
+    // Inicia el carrusel reproduciendo el primer video al cargar la página
+    moveToSlide(0);
 });
