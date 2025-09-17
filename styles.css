@@ -1,240 +1,321 @@
 /* === ESTILOS GENERALES === */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif; /* Cambiamos la fuente general del cuerpo para mejor legibilidad */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
 }
 
 body {
-  line-height: 1.6;
-  color: #34495e; /* Un gris más oscuro y cálido para el texto principal */
-  background-color: #ecf0f1; /* Un fondo gris muy claro para un toque más moderno */
-  font-size: 1.1rem;
+    line-height: 1.6;
+    color: #34495e;
+    background-color: #ecf0f1;
+    font-size: 1.1rem;
 }
 
 /* === ENCABEZADO === */
 header {
-  background: linear-gradient(90deg, #2c3e50, #34495e); /* Gradiente más oscuro y elegante */
-  color: white;
-  padding: 25px 30px; /* Más padding para que el header sea más prominente */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra sutil para darle profundidad */
+    background: linear-gradient(90deg, #2c3e50, #34495e);
+    color: white;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
-/* Contenedor para el logo y el título */
 .header-brand {
-  display: flex;
-  align-items: center;
-  gap: 10px; /* Aumentamos un poco el espacio para que respire más */
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-/* El logo */
 .icono {
-  width: 100px; /* Ajustamos un poco el tamaño del logo */
-  height: auto;
+    width: 100px;
+    height: auto;
 }
 
-/* El título principal */
 header h1 {
-  font-size: 3.2rem; /* Ajustamos ligeramente el tamaño del título */
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700; /* Aseguramos que sea negrita */
-  letter-spacing: -0.5px; /* Pequeño ajuste para que se vea más profesional */
+    font-size: 3.2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.5px;
 }
 
-/* La navegación */
 nav {
-  display: flex;
-  gap: 20px; /* Más espacio entre los enlaces de navegación */
+    display: flex;
+    gap: 20px;
 }
 
 nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600; /* Un poco más de negrita */
-  font-size: 1.05rem; /* Ligeramente más grande */
-  padding: 5px 10px; /* Padding para que los enlaces se vean como botones suaves */
-  border-radius: 5px;
-  transition: background-color 0.3s ease; /* Transición para el hover */
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 nav a:hover {
-  background-color: rgba(255, 255, 255, 0.1); /* Fondo sutil al pasar el mouse */
-  text-decoration: none; /* Quitamos el subrayado en hover si no queremos */
+    background-color: rgba(255, 255, 255, 0.1);
+    text-decoration: none;
 }
 
 /* === SECCIONES === */
 section {
-  padding: 80px 30px; /* Más padding lateral */
-  max-width: 1100px; /* Un poco más ancho el contenido principal */
-  margin: auto;
+    padding: 80px 30px;
+    max-width: 1100px;
+    margin: auto;
 }
 
-/* Títulos de sección (como "Quienes somos" y "Nuestros Servicios") */
 section h2 {
-  text-align: center;
-  margin-bottom: 50px; /* Más espacio debajo del título de sección */
-  color: #2c3e50; /* Color del título de sección más oscuro */
-  font-size: 3rem; /* Más grande */
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  text-transform: uppercase; /* En mayúsculas para un toque corporativo */
-  letter-spacing: 2px;
-  position: relative;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #2c3e50;
+    font-size: 3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
 }
 
-/* Línea decorativa debajo de los títulos de sección */
 section h2::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: -15px; /* Distancia de la línea al texto */
-  transform: translateX(-50%);
-  width: 80px; /* Ancho de la línea */
-  height: 4px; /* Grosor de la línea */
-  background-color: #3498db; /* Color de acento para la línea */
-  border-radius: 2px;
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #3498db;
+    border-radius: 2px;
 }
 
-
-/* Estilos para la sección "Quienes somos" */
 .about p {
-  color: #555; /* Un gris más suave para la descripción */
-  font-size: 1.15rem; /* Ligeramente más grande */
-  line-height: 1.9; /* Mayor espacio entre líneas para mejor lectura */
-  text-align: center; /* Centramos la descripción para que se vea más limpia */
-  max-width: 800px; /* Limitamos el ancho para que no se extienda demasiado */
-  margin: 0 auto; /* Centramos el párrafo */
+    color: #555;
+    font-size: 1.15rem;
+    line-height: 1.9;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 /* === RECUADROS DE SERVICIOS === */
 .lista-servicios {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px; /* Más espacio entre los recuadros */
-  margin-top: 50px; /* Espacio adicional arriba de la lista de servicios */
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se distribuyan en varias líneas si no caben */
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
 }
 
+/* Estilo para los bloques individuales de servicio */
 .lista-servicios li {
-  background-color: #ffffff;
-  padding: 30px; /* Más padding interno para los recuadros */
-  border-radius: 12px; /* Bordes más redondeados */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Sombra más fuerte para un efecto 3D */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para ambos efectos */
-  flex-basis: calc(33.33% - 40px); /* Ajuste del ancho para el nuevo gap */
-  text-align: center;
-  list-style-type: none;
-  border: 1px solid #e0e0e0; /* Borde sutil */
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+    flex-basis: calc(50% - 15px); /* Cada elemento ocupa 50% del ancho para acomodar 2 en una fila */
+    list-style-type: none;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px; /* Más espacio entre los elementos internos */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
 
 .lista-servicios li:hover {
-  transform: translateY(-8px); /* Se eleva un poco más */
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el mouse */
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
 }
 
-/* Logos de los servicios */
+/* Estilo específico para el bloque de Facel */
+.lista-servicios li:nth-child(2) { /* Selecciona el bloque de Facel */
+    padding: 30px;
+}
+
+.lista-servicios li:nth-child(2) img {
+    width: 100px;
+    height: auto;
+}
+
+/* Estilo general para las imágenes de los servicios */
 .lista-servicios li img {
-  width: 120px; /* Aumentamos el tamaño de los logos de servicio */
-  height: auto;
-  border-radius: 10%; /* Los hacemos redondos para un toque moderno */
-  border: 4px solid #3498db; /* Borde de color de acento alrededor del logo */
-  padding: 5px; /* Espacio entre el borde y la imagen */
-  background-color: white;
+    width: 120px;
+    height: auto;
+    border-radius: 10%;
+    border: 4px solid #3498db;
+    padding: 5px;
+    background-color: white;
 }
 
 .lista-servicios li a {
-  text-decoration: none;
-  color: #2c3e50; /* Un color más oscuro para el título del servicio */
-  font-weight: 700; /* Más negrita */
-  font-size: 1.4rem; /* Más grande */
-  transition: color 0.3s ease;
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 700;
+    font-size: 1.4rem;
+    transition: color 0.3s ease;
 }
 
 .lista-servicios li a:hover {
-  color: #3498db; /* Color de acento al pasar el mouse */
-  text-decoration: underline;
+    color: #3498db;
+    text-decoration: underline;
 }
 
 .lista-servicios li p {
-  color: #7f8c8d; /* Un gris más suave para la descripción */
-  font-size: 1.05rem; /* Ligeramente más grande */
-  margin-top: 0;
-  line-height: 1.7;
+    color: #7f8c8d;
+    font-size: 1rem;
+    margin-top: 0;
+    line-height: 1.6;
+}
+
+/* Estilo para los bloques agrupados (Sigma/Facturelo, Technosoft/Xpress) */
+.technosoft-xpress-complex-block,
+.sigma-facturelo-complex-block {
+    background-color: #ffffff;
+    padding: 60px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e0e0e0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    flex-basis: calc(50% - 15px); /* Cada uno ocupa el 50% del ancho */
+}
+
+/* Estilo para los sub-bloques dentro de los recuadros agrupados */
+.technosoft-xpress-complex-block .service-sub-block,
+.sigma-facturelo-complex-block .service-sub-block {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.technosoft-xpress-complex-block .service-sub-block img,
+.sigma-facturelo-complex-block .service-sub-block img {
+    width: 120px;
+    height: auto;
+    border-radius: 10%;
+    border: 4px solid #3498db;
+    padding: 5px;
+    background-color: white;
+}
+
+.technosoft-xpress-complex-block .service-sub-block a,
+.sigma-facturelo-complex-block .service-sub-block a {
+    font-size: 1.4rem;
+}
+
+.technosoft-xpress-complex-block .service-sub-block p,
+.sigma-facturelo-complex-block .service-sub-block p {
+    color: #7f8c8d;
+    font-size: 1rem;
+    margin-top: 0;
+    line-height: 1.6;
 }
 
 /* === PIE DE PÁGINA === */
 footer {
-  text-align: center;
-  background: #2c3e50; /* Color de fondo del footer más oscuro */
-  color: white;
-  padding: 30px; /* Más padding */
-  margin-top: 50px;
-  font-size: 1rem;
+    text-align: center;
+    background: #2c3e50;
+    color: white;
+    padding: 30px;
+    margin-top: 50px;
+    font-size: 1rem;
 }
 
-/* Fuentes de Google Fonts a importar en el HTML */
-/* <link rel="preconnect" href="https://fonts.googleapis.com"> */
-/* <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> */
-/* <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"> */
+/* === NUEVO ESTILO CARRUSEL DE VIDEOS === */
+.video-carousel-container {
+    position: relative;
+    max-width: 500px;
+    margin: 50px auto;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
 
-/* Media Query para pantallas pequeñas, como teléfonos móviles */
-@media (max-width: 768px) {
-  /* === ENCABEZADO === */
-  header {
-    flex-direction: column; /* Apila el logo, el título y la navegación */
-    text-align: center;
-    padding: 20px 15px; /* Reduce el padding para pantallas pequeñas */
-  }
+.video-carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
 
-  /* Contenedor del logo y título */
-  .header-brand {
-    flex-direction: column; /* Apila el logo y el título */
-    gap: 20px; /* Más espacio entre ellos */
-    margin-bottom: 20px;
-  }
+.video-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-  header h1 {
-    font-size: 2.5rem; /* Reduce el tamaño del título para que quepa en una línea */
-  }
-  
-  nav {
-    flex-direction: column; /* Apila los enlaces de la navegación */
-    gap: 15px; /* Más espacio entre los enlaces */
-  }
+.video-slide video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
 
-  /* === SECCIONES === */
-  section {
-    padding: 40px 15px; /* Reduce el padding de las secciones */
-  }
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 15px;
+}
 
-  section h2 {
-    font-size: 2rem; /* Reduce el tamaño de los títulos de sección */
-    margin-bottom: 30px; /* Más espacio debajo del título */
-  }
+.carousel-nav button {
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+}
 
-  /* Descripción "Quienes somos" */
-  .about p {
-    text-align: center; /* Asegura que el texto esté centrado en móviles */
-    font-size: 1rem; /* Un tamaño más adecuado para móviles */
-  }
-  
-  /* === RECUADROS DE SERVICIOS === */
-  .lista-servicios li {
-    flex-basis: 100%; /* Hace que cada recuadro ocupe todo el ancho */
-    flex-direction: column; /* Apila el logo del servicio y el texto */
+.carousel-nav button:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Contenedor de 2 columnas para "Quiénes somos" y el carrusel */
+.two-column-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+.two-column-section .about {
+    flex: 1;
     padding: 20px;
-  }
-  
-  .lista-servicios li img {
-    width: 80px; /* Reduce el tamaño de los logos de servicio */
-  }
+    margin: 0;
+}
+
+.two-column-section .video-carousel-container {
+    flex: 1;
+    max-width: 500px;
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+    .lista-servicios li, .technosoft-xpress-complex-block, .sigma-facturelo-complex-block {
+        flex-basis: 100%;
+    }
 }
