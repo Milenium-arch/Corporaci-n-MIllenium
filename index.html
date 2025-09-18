@@ -4,106 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Corporación Milenium</title>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-
 </head>
 <body>
-
-    <header>
-        <div class="header-brand">
-            <img src="imagen/milenium.jpg" alt="Logo de la Empresa" class="icono">
-            <h1>Corporación Milenium</h1>
-        </div>
-        <nav>
-            <a href="#quienes-somos">¿Quienes somos?</a>
-            <a href="#servicios">Servicios</a>
-            <a href="#contacto">Contacto</a>
-        </nav>
-    </header>
-
-    <div class="two-column-section">
-
+    <div class="hero-section">
+        <video autoplay muted loop>
+            <source src="video/banner.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <header>
+            <div class="header-content">
+                <div class="header-brand">
+                    <img src="imagen/milenium.jpg" alt="Logo de la Empresa" class="icono">
+                    <h1>Corporación Milenium</h1>
+                </div>
+                <nav>
+                    <a href="#">¿Quienes somos?</a>
+                    <a href="#servicios">Servicios</a>
+                    <a href="#contacto">Contacto</a>
+                </nav>
+            </div>
+        </header>
         <section id="quienes-somos" class="about">
             <h2>¿Quiénes somos?</h2>
             <p>Somos una empresa 100% costarricense desarrolladora de Software contable y financiero con una trayectoria de más de 30 años de experiencia en el mercado conformado por Technosoft, incorporándose al negocio Facel, Sigma Asesorías Contables y Milenium Training Center.</p>
         </section>
-
-        <div class="video-carousel-container">
-            <div class="video-carousel-track">
-                <div class="video-slide">
-                    <video muted controls>
-                        <source src="video/MTCexplicacion.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="video-slide">
-                    <video muted controls>
-                        <source src="video/contadorxpress.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="video-slide">
-                    <video muted controls>
-                        <source src="video/contadorxpress2.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="video-slide">
-                    <video muted controls>
-                        <source src="video/Facturelo(sigma).mp4" type="video/mp4">
-                    </video>
-                </div>
-            </div>
-            <div class="carousel-nav">
-                <button class="nav-prev">❮</button>
-                <button class="nav-next">❯</button>
-            </div>
-        </div>
     </div>
-    
     <section id="servicios" class="services">
         <h2>Nuestros Servicios</h2>
-        <ul class="lista-servicios">
-            <li class="sigma-facturelo-complex-block">
-                <div class="service-sub-block">
+        <div class="services-content-wrapper">
+            <div class="services-column left">
+                <div class="service-item">
                     <img src="imagen/Sigma .jpg" alt="Logo de Sigma">
-                    <a href="https://sigmacr.net">Sigma</a>
+                    <a href="https://contador-xpress.com">Sigma</a>
                     <p>La comunidad de distribuidores ofrece beneficios exclusivos para contadores, como Facturelo es un sistema de facturación electrónica amigable y adaptable a cualquier actividad económica, diseñado para pymes y pequeños negocios. Facilita el control de ventas y clientes, garantizando una gestión rápida, práctica y sencilla.</p>
                 </div>
-            </li>
-            <li>
-                <img src="imagen/Facel .jpg" alt="Logo de Facel">
-                <a href="https://facelcr.com/#/home">Facel</a>
-                <p>Plataforma de facturación electrónica sólida y altamente escalable, concebida para corporaciones con gran volumen de operaciones. Su aplicación, flexible y confiable, optimiza la gestión de procesos fiscales y garantiza eficiencia, precisión y continuidad en entornos de alta demanda.</p>
-            </li>
-            <li class="technosoft-xpress-complex-block">
-                <div class="service-sub-block">
+                <div class="service-item">
+                    <img src="imagen/Facel .jpg" alt="Logo de Facel">
+                    <a href="https://facelcr.com/#/home">Facel</a>
+                    <p>Plataforma de facturación electrónica sólida y altamente escalable, concebida para corporaciones con gran volumen de operaciones. Su aplicación, flexible y confiable, optimiza la gestión de procesos fiscales y garantiza eficiencia, precisión y continuidad en entornos de alta demanda.</p>
+                </div>
+            </div>
+            <div class="video-carousel-container">
+                <div class="video-carousel-track">
+                    <div class="video-slide">
+                        <video autoplay muted controls>
+                            <source src="video/MTCexplicacion.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-slide vertical-video">
+                        <video autoplay muted controls>
+                            <source src="video/contadorxpress.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-slide">
+                        <video autoplay muted controls>
+                            <source src="video/contadorxpress2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-slide">
+                        <video autoplay muted controls>
+                            <source src="video/Facturelo(sigma).mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="carousel-nav">
+                    <button class="nav-prev">❮</button>
+                    <button class="nav-next">❯</button>
+                </div>
+            </div>
+            <div class="services-column right">
+                <div class="service-item">
+                    <img src="imagen/ATC.jpg" alt="Logo de Millenium Training Center">
+                    <a href="https://mtc.co.cr">Millenium Training Center</a>
+                    <p>Centro de Capacitación, Asesoría, Consultoría, y Coaching Grupal, especializado en el Desarrollo Estratégico del talento humano y el fortalecimiento organizacional.</p>
+                </div>
+                <div class="service-item">
                     <img src="imagen/logoTech.png" alt="Logo de Technosoft">
                     <a href="https://technosoftcr.com/Default.aspx">Technosoft</a>
                     <p>Es una empresa de desarrollo de software fundada en Costa Rica con mas de 30 años en mercado local e internacional, como Contador Xpress es un conjunto integral de sistemas y software que optimiza la toma de decisiones en contabilidad, inventarios y finanzas, incorporando inteligencia artificial para la carga automática de documentos.</p>
                 </div>
-            </li>
-            <li>
-                <img src="imagen/ATC.jpg" alt="Logo de Millenium Training Center">
-                <a href="https://mtc.co.cr">Millenium Training Center</a>
-                <p>Centro de Capacitación, Asesoría, Consultoría y Coaching Grupal, especializado en el Desarrollo Estratégico del talento humano y el fortalecimiento organizacional.</p>
-            </li>
-        </ul>
+            </div>
+        </div>
     </section>
-
-    <section id="contacto" class="contact">
+    <section id="contacto" class="contact-section">
         <h2>Contacto</h2>
-        <p>📍 Dirección: <a href="https://maps.app.goo.gl/8GiLCv3jNfSzGCz69" target="_blank">San José, San Pedro Montes De Oca</a></p>
-        <p>📞 Teléfono: <a href="tel:+50621058095">+506 2105-8095</a></p>
-        <p>✉️ Correo: <a href="mailto:ventas@corporacionmillenium.com">ventas@corporacionmillenium.com</a></p>
+        <div class="contact-info-container">
+            <p><i class="fas fa-map-marker-alt"></i> Dirección: <a href="https://maps.app.goo.gl/8GiLCv3jNfSzGCz69" target="_blank">San José, San Pedro Montes De Oca</a></p>
+            <p><i class="fas fa-phone"></i> Teléfono: <a href="tel:+50621058095">+506 2105-8095</a></p>
+            <p><i class="fas fa-envelope"></i> Correo: <a href="mailto:ventas@corporacionmillenium.com">ventas@corporacionmillenium.com</a></p>
+        </div>
     </section>
-
     <footer>
-        <p>© Corporación Milenium - Todos los derechos reservados</p>
+        <div class="footer-content">
+            <p>© Corporación Milenium - Todos los derechos reservados</p>
+        </div>
     </footer>
     <script src="script.js"></script>
-
 </body>
 </html>
